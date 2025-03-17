@@ -1,0 +1,4 @@
+LDI r1, 0x1D
+SUB r1, r0
+NEG r0
+SHRA r0

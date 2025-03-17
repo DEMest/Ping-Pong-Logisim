@@ -29,55 +29,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool name="Pull Resistor">
       <a name="facing" val="north"/>
     </tool>
-    <tool name="Clock">
-      <a name="facing" val="north"/>
-    </tool>
     <tool name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x80"/>
     </tool>
-    <tool name="Power">
-      <a name="facing" val="west"/>
-      <a name="width" val="9"/>
-    </tool>
-    <tool name="Bit Extender">
-      <a name="out_width" val="7"/>
-      <a name="type" val="sign"/>
-    </tool>
   </lib>
-  <lib desc="#Gates" name="1">
-    <tool name="NOT Gate">
-      <a name="facing" val="west"/>
-    </tool>
-    <tool name="AND Gate">
-      <a name="facing" val="north"/>
-    </tool>
-    <tool name="NOR Gate">
-      <a name="facing" val="north"/>
-    </tool>
-    <tool name="XOR Gate">
-      <a name="facing" val="west"/>
-    </tool>
-    <tool name="Controlled Buffer">
-      <a name="facing" val="south"/>
-      <a name="width" val="8"/>
-    </tool>
-  </lib>
-  <lib desc="#Plexers" name="2">
-    <tool name="Multiplexer">
-      <a name="facing" val="west"/>
-      <a name="width" val="4"/>
-      <a name="enable" val="false"/>
-    </tool>
-    <tool name="Priority Encoder">
-      <a name="select" val="2"/>
-    </tool>
-  </lib>
-  <lib desc="#Arithmetic" name="3">
-    <tool name="Adder">
-      <a name="width" val="16"/>
-    </tool>
-  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
   <lib desc="#Memory" name="4">
     <tool name="ROM">
       <a name="contents">addr/data: 8 8
@@ -85,11 +44,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
 </a>
     </tool>
   </lib>
-  <lib desc="#I/O" name="5">
-    <tool name="Button">
-      <a name="facing" val="north"/>
-    </tool>
-  </lib>
+  <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
       <a name="text" val=""/>
@@ -98,32 +53,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="jar#C:\Users\Даниил\Desktop\main\ДЗ\Assembler\CDM-x\jar\logisim-cdm-emulator-0.2.2.jar#org.cdm.logisim.emulator.Components" name="7"/>
-  <lib desc="file#CDM-x/CdM-8e.circ" name="8"/>
-  <lib desc="file#CDM-x/cdm16.circ" name="9">
-    <tool name="sp_register">
-      <a name="facing" val="north"/>
-    </tool>
-    <tool name="pc_register">
-      <a name="facing" val="north"/>
-    </tool>
-    <tool name="ps_register">
-      <a name="facing" val="north"/>
-    </tool>
-    <tool name="bus_control">
-      <a name="facing" val="north"/>
-    </tool>
-    <tool name="barrel_shifter">
-      <a name="facing" val="north"/>
-    </tool>
-    <tool name="adder16">
-      <a name="facing" val="north"/>
-    </tool>
-    <tool name="branch_logic">
-      <a name="facing" val="north"/>
-    </tool>
-  </lib>
-  <lib desc="file#CDM-x/CdM-8-mark5-full.circ" name="10"/>
+  <lib desc="jar#jar/logisim-cdm-emulator-0.2.2.jar#org.cdm.logisim.emulator.Components" name="7"/>
+  <lib desc="file#CdM-8-mark5-full.circ" name="8"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -162,14 +93,90 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <comp lib="10" loc="(180,170)" name="CdM_8_mark5"/>
-    <comp lib="4" loc="(380,320)" name="RAM"/>
-    <comp lib="0" loc="(300,90)" name="Pin">
-      <a name="width" val="8"/>
+    <wire from="(230,190)" to="(230,200)"/>
+    <wire from="(250,190)" to="(250,200)"/>
+    <wire from="(180,60)" to="(230,60)"/>
+    <wire from="(450,260)" to="(450,270)"/>
+    <wire from="(490,380)" to="(490,390)"/>
+    <wire from="(310,330)" to="(310,340)"/>
+    <wire from="(550,220)" to="(550,290)"/>
+    <wire from="(310,340)" to="(310,350)"/>
+    <wire from="(270,190)" to="(270,200)"/>
+    <wire from="(380,210)" to="(380,220)"/>
+    <wire from="(390,170)" to="(560,170)"/>
+    <wire from="(510,380)" to="(510,400)"/>
+    <wire from="(470,380)" to="(470,400)"/>
+    <wire from="(450,270)" to="(560,270)"/>
+    <wire from="(280,250)" to="(390,250)"/>
+    <wire from="(280,260)" to="(380,260)"/>
+    <wire from="(390,390)" to="(490,390)"/>
+    <wire from="(180,310)" to="(180,340)"/>
+    <wire from="(390,250)" to="(390,340)"/>
+    <wire from="(380,260)" to="(380,350)"/>
+    <wire from="(320,290)" to="(550,290)"/>
+    <wire from="(280,290)" to="(300,290)"/>
+    <wire from="(380,220)" to="(400,220)"/>
+    <wire from="(380,350)" to="(400,350)"/>
+    <wire from="(560,170)" to="(560,270)"/>
+    <wire from="(380,220)" to="(380,260)"/>
+    <wire from="(280,300)" to="(290,300)"/>
+    <wire from="(290,360)" to="(300,360)"/>
+    <wire from="(310,340)" to="(390,340)"/>
+    <wire from="(390,340)" to="(390,390)"/>
+    <wire from="(320,360)" to="(400,360)"/>
+    <wire from="(290,300)" to="(290,360)"/>
+    <wire from="(550,290)" to="(550,340)"/>
+    <wire from="(540,220)" to="(550,220)"/>
+    <wire from="(540,340)" to="(550,340)"/>
+    <comp lib="0" loc="(230,60)" name="Tunnel">
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(470,400)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(380,210)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="1" loc="(310,300)" name="NOT Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(510,400)" name="Pin">
+      <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(50,70)" name="Probe">
+    <comp lib="0" loc="(250,190)" name="Probe">
       <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
     </comp>
+    <comp lib="0" loc="(180,340)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="4" loc="(540,220)" name="RAM"/>
+    <comp lib="0" loc="(230,190)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="4" loc="(540,340)" name="RAM">
+      <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="0" loc="(270,190)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="1" loc="(320,290)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(180,60)" name="Clock"/>
+    <comp lib="1" loc="(300,360)" name="Controlled Buffer">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="8" loc="(280,260)" name="CdM_8_mark5"/>
   </circuit>
 </project>
