@@ -95,60 +95,89 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(230,190)" to="(230,200)"/>
     <wire from="(250,190)" to="(250,200)"/>
+    <wire from="(210,150)" to="(210,160)"/>
     <wire from="(180,60)" to="(230,60)"/>
-    <wire from="(450,260)" to="(450,270)"/>
-    <wire from="(490,380)" to="(490,390)"/>
     <wire from="(310,330)" to="(310,340)"/>
     <wire from="(550,220)" to="(550,290)"/>
-    <wire from="(310,340)" to="(310,350)"/>
     <wire from="(270,190)" to="(270,200)"/>
-    <wire from="(380,210)" to="(380,220)"/>
-    <wire from="(390,170)" to="(560,170)"/>
-    <wire from="(510,380)" to="(510,400)"/>
-    <wire from="(470,380)" to="(470,400)"/>
-    <wire from="(450,270)" to="(560,270)"/>
     <wire from="(280,250)" to="(390,250)"/>
+    <wire from="(250,150)" to="(250,170)"/>
     <wire from="(280,260)" to="(380,260)"/>
     <wire from="(390,390)" to="(490,390)"/>
-    <wire from="(180,310)" to="(180,340)"/>
-    <wire from="(390,250)" to="(390,340)"/>
-    <wire from="(380,260)" to="(380,350)"/>
+    <wire from="(170,170)" to="(170,200)"/>
     <wire from="(320,290)" to="(550,290)"/>
     <wire from="(280,290)" to="(300,290)"/>
-    <wire from="(380,220)" to="(400,220)"/>
     <wire from="(380,350)" to="(400,350)"/>
+    <wire from="(180,160)" to="(180,200)"/>
     <wire from="(560,170)" to="(560,270)"/>
     <wire from="(380,220)" to="(380,260)"/>
+    <wire from="(190,160)" to="(210,160)"/>
     <wire from="(280,300)" to="(290,300)"/>
-    <wire from="(290,360)" to="(300,360)"/>
-    <wire from="(310,340)" to="(390,340)"/>
-    <wire from="(390,340)" to="(390,390)"/>
     <wire from="(320,360)" to="(400,360)"/>
-    <wire from="(290,300)" to="(290,360)"/>
     <wire from="(550,290)" to="(550,340)"/>
     <wire from="(540,220)" to="(550,220)"/>
     <wire from="(540,340)" to="(550,340)"/>
-    <comp lib="0" loc="(230,60)" name="Tunnel">
-      <a name="label" val="clock"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <wire from="(160,150)" to="(160,160)"/>
+    <wire from="(450,260)" to="(450,270)"/>
+    <wire from="(490,380)" to="(490,390)"/>
+    <wire from="(200,170)" to="(250,170)"/>
+    <wire from="(310,340)" to="(310,350)"/>
+    <wire from="(380,210)" to="(380,220)"/>
+    <wire from="(120,170)" to="(170,170)"/>
+    <wire from="(510,380)" to="(510,400)"/>
+    <wire from="(470,380)" to="(470,400)"/>
+    <wire from="(450,270)" to="(560,270)"/>
+    <wire from="(120,150)" to="(120,170)"/>
+    <wire from="(180,310)" to="(180,340)"/>
+    <wire from="(390,250)" to="(390,340)"/>
+    <wire from="(200,170)" to="(200,200)"/>
+    <wire from="(380,260)" to="(380,350)"/>
+    <wire from="(380,220)" to="(400,220)"/>
+    <wire from="(190,160)" to="(190,200)"/>
+    <wire from="(160,160)" to="(180,160)"/>
+    <wire from="(290,360)" to="(300,360)"/>
+    <wire from="(310,340)" to="(390,340)"/>
+    <wire from="(390,340)" to="(390,390)"/>
+    <wire from="(290,300)" to="(290,360)"/>
+    <wire from="(360,170)" to="(560,170)"/>
+    <comp lib="1" loc="(300,360)" name="Controlled Buffer">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(470,400)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="clock"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(380,210)" name="Probe">
+    <comp lib="0" loc="(160,150)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
     </comp>
-    <comp lib="1" loc="(310,300)" name="NOT Gate">
-      <a name="facing" val="north"/>
+    <comp lib="4" loc="(540,340)" name="RAM">
+      <a name="bus" val="separate"/>
     </comp>
+    <comp lib="1" loc="(320,290)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(270,190)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(250,190)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="8" loc="(280,260)" name="CdM_8_mark5"/>
     <comp lib="0" loc="(510,400)" name="Pin">
       <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(250,190)" name="Probe">
+    <comp lib="0" loc="(180,60)" name="Clock"/>
+    <comp lib="4" loc="(540,220)" name="RAM"/>
+    <comp lib="0" loc="(230,60)" name="Tunnel">
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(210,150)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(380,210)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
     </comp>
@@ -157,26 +186,66 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="clock"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="4" loc="(540,220)" name="RAM"/>
+    <comp lib="0" loc="(250,150)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(120,150)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="1" loc="(310,300)" name="NOT Gate">
+      <a name="facing" val="north"/>
+    </comp>
     <comp lib="0" loc="(230,190)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
     </comp>
-    <comp lib="4" loc="(540,340)" name="RAM">
-      <a name="bus" val="separate"/>
+    <comp lib="0" loc="(470,400)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(270,190)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
+  </circuit>
+  <circuit name="keyboard">
+    <a name="circuit" val="keyboard"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(110,230)" to="(270,230)"/>
+    <wire from="(280,230)" to="(440,230)"/>
+    <wire from="(400,250)" to="(420,250)"/>
+    <wire from="(420,240)" to="(440,240)"/>
+    <wire from="(420,240)" to="(420,250)"/>
+    <wire from="(80,190)" to="(100,190)"/>
+    <wire from="(120,190)" to="(140,190)"/>
+    <wire from="(70,100)" to="(110,100)"/>
+    <wire from="(460,250)" to="(460,280)"/>
+    <wire from="(270,200)" to="(270,230)"/>
+    <wire from="(280,200)" to="(280,230)"/>
+    <wire from="(110,200)" to="(110,230)"/>
+    <comp lib="0" loc="(400,250)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="1" loc="(320,290)" name="Controlled Buffer">
-      <a name="width" val="8"/>
+    <comp lib="0" loc="(80,190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(180,60)" name="Clock"/>
-    <comp lib="1" loc="(300,360)" name="Controlled Buffer">
-      <a name="facing" val="west"/>
-      <a name="width" val="8"/>
+    <comp lib="5" loc="(440,240)" name="TTY"/>
+    <comp lib="0" loc="(460,280)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bus 0"/>
     </comp>
-    <comp lib="8" loc="(280,260)" name="CdM_8_mark5"/>
+    <comp lib="5" loc="(140,190)" name="Keyboard"/>
+    <comp lib="1" loc="(120,190)" name="Controlled Buffer"/>
+    <comp lib="0" loc="(70,100)" name="Clock"/>
+    <comp lib="0" loc="(110,100)" name="Tunnel">
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
   </circuit>
 </project>
