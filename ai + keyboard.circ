@@ -140,43 +140,36 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(360,170)" to="(560,170)"/>
     <wire from="(540,220)" to="(550,220)"/>
     <wire from="(540,340)" to="(550,340)"/>
-    <comp lib="0" loc="(180,60)" name="Clock"/>
-    <comp lib="8" loc="(280,260)" name="CdM_8_mark5"/>
-    <comp lib="0" loc="(210,150)" name="Probe">
+    <comp lib="0" loc="(160,150)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
     </comp>
-    <comp lib="0" loc="(230,60)" name="Tunnel">
-      <a name="label" val="clock"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(250,150)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(470,400)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="clock"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(230,190)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(270,190)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(250,190)" name="Probe">
+    <comp lib="0" loc="(380,210)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
     </comp>
     <comp lib="1" loc="(320,290)" name="Controlled Buffer">
       <a name="width" val="8"/>
     </comp>
-    <comp lib="1" loc="(300,360)" name="Controlled Buffer">
-      <a name="facing" val="west"/>
-      <a name="width" val="8"/>
+    <comp lib="0" loc="(180,60)" name="Clock"/>
+    <comp lib="0" loc="(230,190)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="4" loc="(540,340)" name="RAM">
+      <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="0" loc="(210,150)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="1" loc="(310,300)" name="NOT Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="8" loc="(280,260)" name="CdM_8_mark5"/>
+    <comp lib="0" loc="(230,60)" name="Tunnel">
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(510,400)" name="Pin">
       <a name="facing" val="north"/>
@@ -186,25 +179,32 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
     </comp>
+    <comp lib="0" loc="(250,190)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
     <comp lib="0" loc="(180,340)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="clock"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(380,210)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(160,150)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
     <comp lib="4" loc="(540,220)" name="RAM"/>
-    <comp lib="4" loc="(540,340)" name="RAM">
-      <a name="bus" val="separate"/>
+    <comp lib="1" loc="(300,360)" name="Controlled Buffer">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
     </comp>
-    <comp lib="1" loc="(310,300)" name="NOT Gate">
+    <comp lib="0" loc="(470,400)" name="Tunnel">
       <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(270,190)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(250,150)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
     </comp>
   </circuit>
   <circuit name="keyboard">
@@ -254,15 +254,130 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(230,220)" to="(250,220)"/>
     <wire from="(310,330)" to="(320,330)"/>
     <wire from="(310,250)" to="(320,250)"/>
-    <comp lib="0" loc="(380,250)" name="Pull Resistor"/>
+    <comp lib="0" loc="(310,250)" name="Power">
+      <a name="facing" val="west"/>
+    </comp>
     <comp lib="0" loc="(380,330)" name="Pull Resistor"/>
+    <comp lib="0" loc="(380,250)" name="Pull Resistor"/>
+    <comp lib="0" loc="(360,320)" name="Transistor">
+      <a name="type" val="n"/>
+    </comp>
+    <comp lib="0" loc="(210,280)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x4b"/>
+    </comp>
+    <comp lib="3" loc="(290,310)" name="Comparator">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="3" loc="(290,230)" name="Comparator">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="3" loc="(290,270)" name="Comparator">
+      <a name="width" val="7"/>
+    </comp>
     <comp lib="0" loc="(210,320)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x77"/>
     </comp>
+    <comp lib="0" loc="(360,260)" name="Transistor">
+      <a name="type" val="n"/>
+      <a name="gate" val="br"/>
+    </comp>
+    <comp lib="0" loc="(470,300)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="3" loc="(290,350)" name="Comparator">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(420,300)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(310,330)" name="Power">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(360,240)" name="Transistor">
+      <a name="type" val="n"/>
+    </comp>
     <comp lib="0" loc="(210,360)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x46"/>
+    </comp>
+    <comp lib="0" loc="(190,300)" name="Pin">
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(440,300)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(210,240)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x73"/>
+    </comp>
+    <comp lib="0" loc="(360,340)" name="Transistor">
+      <a name="type" val="n"/>
+      <a name="gate" val="br"/>
+    </comp>
+  </circuit>
+  <circuit name="keyboardR">
+    <a name="circuit" val="keyboardR"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(320,240)" to="(320,250)"/>
+    <wire from="(320,220)" to="(320,230)"/>
+    <wire from="(320,300)" to="(320,310)"/>
+    <wire from="(320,250)" to="(320,260)"/>
+    <wire from="(320,270)" to="(320,280)"/>
+    <wire from="(360,240)" to="(360,250)"/>
+    <wire from="(320,320)" to="(320,330)"/>
+    <wire from="(360,320)" to="(360,330)"/>
+    <wire from="(360,250)" to="(360,260)"/>
+    <wire from="(320,330)" to="(320,340)"/>
+    <wire from="(320,350)" to="(320,360)"/>
+    <wire from="(360,330)" to="(360,340)"/>
+    <wire from="(400,300)" to="(400,330)"/>
+    <wire from="(210,280)" to="(250,280)"/>
+    <wire from="(190,300)" to="(230,300)"/>
+    <wire from="(210,240)" to="(250,240)"/>
+    <wire from="(210,360)" to="(250,360)"/>
+    <wire from="(210,320)" to="(250,320)"/>
+    <wire from="(440,300)" to="(470,300)"/>
+    <wire from="(290,350)" to="(320,350)"/>
+    <wire from="(290,230)" to="(320,230)"/>
+    <wire from="(290,270)" to="(320,270)"/>
+    <wire from="(290,310)" to="(320,310)"/>
+    <wire from="(320,220)" to="(340,220)"/>
+    <wire from="(320,280)" to="(340,280)"/>
+    <wire from="(320,300)" to="(340,300)"/>
+    <wire from="(360,250)" to="(380,250)"/>
+    <wire from="(380,250)" to="(400,250)"/>
+    <wire from="(360,330)" to="(380,330)"/>
+    <wire from="(380,330)" to="(400,330)"/>
+    <wire from="(320,360)" to="(340,360)"/>
+    <wire from="(420,300)" to="(440,300)"/>
+    <wire from="(230,260)" to="(230,300)"/>
+    <wire from="(230,220)" to="(230,260)"/>
+    <wire from="(230,300)" to="(230,340)"/>
+    <wire from="(400,250)" to="(400,290)"/>
+    <wire from="(230,300)" to="(250,300)"/>
+    <wire from="(230,340)" to="(250,340)"/>
+    <wire from="(230,260)" to="(250,260)"/>
+    <wire from="(230,220)" to="(250,220)"/>
+    <wire from="(310,330)" to="(320,330)"/>
+    <wire from="(310,250)" to="(320,250)"/>
+    <comp lib="0" loc="(380,330)" name="Pull Resistor"/>
+    <comp lib="0" loc="(420,300)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(440,300)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(470,300)" name="Pin">
       <a name="facing" val="west"/>
@@ -274,53 +389,71 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="type" val="n"/>
       <a name="gate" val="br"/>
     </comp>
-    <comp lib="0" loc="(360,240)" name="Transistor">
-      <a name="type" val="n"/>
-    </comp>
-    <comp lib="0" loc="(310,330)" name="Power">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="3" loc="(290,350)" name="Comparator">
+    <comp lib="3" loc="(290,230)" name="Comparator">
       <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(380,250)" name="Pull Resistor"/>
+    <comp lib="0" loc="(210,240)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x6c"/>
     </comp>
     <comp lib="0" loc="(190,300)" name="Pin">
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(210,280)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x4b"/>
-    </comp>
-    <comp lib="0" loc="(440,300)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
     <comp lib="0" loc="(360,320)" name="Transistor">
       <a name="type" val="n"/>
     </comp>
-    <comp lib="0" loc="(210,240)" name="Constant">
+    <comp lib="3" loc="(290,350)" name="Comparator">
       <a name="width" val="7"/>
-      <a name="value" val="0x73"/>
+    </comp>
+    <comp lib="0" loc="(210,320)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x6f"/>
     </comp>
     <comp lib="3" loc="(290,310)" name="Comparator">
       <a name="width" val="7"/>
     </comp>
+    <comp lib="0" loc="(310,250)" name="Power">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(210,360)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x49"/>
+    </comp>
+    <comp lib="0" loc="(360,240)" name="Transistor">
+      <a name="type" val="n"/>
+    </comp>
     <comp lib="3" loc="(290,270)" name="Comparator">
       <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(310,330)" name="Power">
+      <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(360,260)" name="Transistor">
       <a name="type" val="n"/>
       <a name="gate" val="br"/>
     </comp>
-    <comp lib="0" loc="(420,300)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(310,250)" name="Power">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="3" loc="(290,230)" name="Comparator">
+    <comp lib="0" loc="(210,280)" name="Constant">
       <a name="width" val="7"/>
+      <a name="value" val="0x34"/>
     </comp>
+  </circuit>
+  <circuit name="test">
+    <a name="circuit" val="test"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(70,210)" to="(100,210)"/>
+    <wire from="(240,220)" to="(240,290)"/>
+    <wire from="(30,200)" to="(70,200)"/>
+    <wire from="(70,200)" to="(70,210)"/>
+    <wire from="(240,290)" to="(260,290)"/>
+    <comp lib="0" loc="(260,290)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(30,200)" name="Clock"/>
+    <comp lib="5" loc="(100,210)" name="Keyboard"/>
   </circuit>
 </project>
